@@ -1,0 +1,31 @@
+{
+  "name": "clm-api",
+  "version": "1.0.0",
+  "description": "a tool for customer management",
+  "homepage": "https://github.com/kenshelby/clm-api#readme",
+  "bugs": {
+    "url": "https://github.com/kenshelby/clm-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenshelby/clm-api.git"
+  },
+  "license": "ISC",
+  "author": "vishwaprakash",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.10.4",
+    "morgan": "^1.12.1",
+    "slugify": "^1.6.9"
+  }
+}
