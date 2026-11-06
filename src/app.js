@@ -1,7 +1,8 @@
 import express from "express";
 import morgan from "morgan";
 import dotenv from "dotenv";
-import cors from "cors"
+import cors from "cors";
+import cookieParser from "cookie-parser";
 import connectToDb from "./utils/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import liveRoutes from "./routes/liveRoutes.js";
@@ -17,6 +18,7 @@ const corsOptions = {
     allowedHeaders: ["Content-Type", "Authorization"],
 };
 
+app.use(cookieParser());
 app.use(cors(corsOptions));
 app.options(/.*/, cors(corsOptions));
 app.use(express.json()); //parses incoming req and adds to req.body
